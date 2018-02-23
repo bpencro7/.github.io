@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dirt</title>
+  </head>
+  <body>
+  
+  
+  <h1 style="text-align:center;">Gallery of Dirt<h2/>
+  <h6 style="text-align:center;">Below Are Some Pictures of Dirt and Dirt Related Objects</h6>
+  <div><img src="default dirt.jpg" alt = "default dirt"></div>
+  <div><img src="rocks.jpg" alt = "rocks"></div>
+  <div><img src="cracked clay.jpg" alt = "clay"></div>
+  <div><img src="rust.jpg" alt = "rust"></div>
+  <div><img src="dirt paper.jpg" alt = "dirt paper"></div>
+  <div><img src="sand.jpg" alt = "sand"></div>
+
+</body>
+</html>

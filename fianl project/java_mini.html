@@ -1,0 +1,117 @@
+<html>
+   <head>
+  	<title>What crew position should i be in</title>
+  	<style>
+  	h1{
+	font-size:30px;
+	font-family:Palatino;
+	text-align:center;
+	margin-left:200px;
+	margin-right:200px;
+	  }
+	  p{
+	font-size:20px;
+	font-family:Palatino;
+	text-align:center;
+	margin-left:250px;
+	margin-right:300px;
+	  }
+	</style>
+   </head>
+   <body>
+   <body style="background-color:#cc9966;">
+   
+  	<p>My name is <input id="name" size=20>
+
+  	<p>I am <select id='flexibility'>
+                        	<option value=0> stiff as an uncooked noodle</option>
+                        	<option value=1>not very flexible</option>
+                        	<option value=3 selected>moderately flexible</option>
+                        	<option value=2>as flexible as a cooked noodle</option>
+                   	  </select>
+    <p>My height is <input id="height" size=5> feet tall
+                        	
+    <p>I weigh <input id="weight" size=5> lbs </p>
+
+  	<p><button onClick='doLoop()'>Determine Position</button>
+  	<p><h1><div id="results">Fill out the boxes to find your ideal crew position!</div>
+  	
+    </h1>
+
+  	<script type='text/javascript'>
+     	function doLoop() {
+     	
+        	//put the value of the text box in a var called sayWhat
+        	var flexibility = parseInt(document.getElementById('flexibility').value);
+        	
+    	    //put the value of the dropdown box in a var called maxLoop
+        	var height = parseFloat(document.getElementById('height').value);
+        	
+        	var weight = parseInt(document.getElementById('weight').value);
+        	
+        	var name = document.getElementById('name').value;
+        	
+        	var a = 0
+        	
+        	if (weight <= 135) {
+        	a = 1;
+        	}
+        	
+        	if (weight >= 135 && weight <= 165) {
+        	a = 2;
+        	}
+        	
+        	if (weight >= 165) {
+        	a = 3;
+        	}
+        	
+        	var b = 0
+        	
+        	if (height <= 5.1) {
+        	b = 1;
+        	}
+        	
+        	if (height <= 5.9 && height >= 5.4) {
+        	b = 2;
+        	}
+        	
+        	if (height >= 5.8) {
+        	b = 3;
+        	}
+        	
+        	var c = flexibility
+        	
+        	var add = a+b+c
+        	console.log(c);
+        	console.log(b);
+        	console.log(a);
+        	console.log(add);
+        	var recommendation = 'opopoop'
+        	var pic = '<img src="Crew_Onffroy.jpg" alt="Ha, the image wont load!">'
+        	
+        	if (add <= 5) {
+        	recommendation = 'coxswain'
+        	pic = '<img src="Crew_Onffroy1.jpg" alt="Ha, the image wont load!">'
+        	
+        	}
+        	
+        	if (add > 5 && add < 7) {
+        	recommendation = 'stroke or bow seat rower'
+        	pic = '<img src="Crew_Onffroy3.jpg" alt="Ha, the image wont load!">'
+        	
+        	}
+        	
+        	if (add > 6) {
+        	recommendation = 'middle seat rower (2 or 3)'
+        	pic = '<img src="Crew_Onffroy2.jpg" alt="Ha, the image wont load!">'
+        	}
+        	
+        	
+        	var str = '<h1> Hey ' + name + '. I recommend you become a ' + recommendation + '.</h1>' + pic + '<p> Try again? </p>'
+
+        	
+            document.getElementById("results").innerHTML=str;
+     	}
+  	</script>
+   </body>
+</html>
